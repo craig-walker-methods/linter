@@ -19,13 +19,16 @@ module "activate_apis" {
   project_id = var.project_id
 
   activate_apis = [
-    "compute.googleapis.com",
-    "iam.googleapis.com",
+    "artifactregistry.googleapis.com",
     "cloudbuild.googleapis.com",
     "cloudrun.googleapis.com",
+    "compute.googleapis.com",
     "firebase.googleapis.com",
     "firebasestorage.googleapis.com",
+    "iam.googleapis.com",
     "logging.googleapis.com",
     "monitoring.googleapis.com",
+    "secretmanager.googleapis.com",
+    "vpcaccess.googleapis.com",
   ]
 }

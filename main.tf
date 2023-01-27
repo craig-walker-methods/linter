@@ -1,5 +1,4 @@
 terraform {
-  backend "gcs" {}
   required_version = "1.3.7"
   required_providers {
     google = {
@@ -13,16 +12,6 @@ terraform {
   }
 }
 
-provider "google" {
-  project = var.project_id
-  region  = var.region
-}
-
-provider "google-beta" {
-  project = var.project_id
-  region  = var.region
-}
-
 module "activate_apis" {
   source  = "terraform-google-modules/project-factory/google//modules/project_services"
   version = "14.1.0"
@@ -30,11 +19,16 @@ module "activate_apis" {
   project_id = var.project_id
 
   activate_apis = [
-    "compute.googleapis.com",
-    "iam.googleapis.com",
+    "artifactregistry.googleapis.com",
     "cloudbuild.googleapis.com",
-    "run.googleapis.com ",
+    "compute.googleapis.com",
     "firebase.googleapis.com",
     "firebasestorage.googleapis.com",
+    "iam.googleapis.com",
+    "logging.googleapis.com",
+    "monitoring.googleapis.com",
+    "run.googleapis.com ",
+    "secretmanager.googleapis.com",
+    "vpcaccess.googleapis.com",
   ]
 }

@@ -22,12 +22,12 @@ module "activate_apis" {
     "artifactregistry.googleapis.com",
     "cloudbuild.googleapis.com",
     "compute.googleapis.com",
-    "run.googleapis.com ",
     "firebase.googleapis.com",
     "firebasestorage.googleapis.com",
     "iam.googleapis.com",
     "logging.googleapis.com",
     "monitoring.googleapis.com",
+    "run.googleapis.com ",
     "secretmanager.googleapis.com",
     "vpcaccess.googleapis.com",
   ]

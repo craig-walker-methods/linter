@@ -32,5 +32,9 @@ module "activate_apis" {
   activate_apis = [
     "compute.googleapis.com",
     "iam.googleapis.com",
+    "cloudbuild.googleapis.com",
+    "cloudrun.googleapis.com",
+    "firebase.googleapis.com",
+    "firebasestorage.googleapis.com",
   ]
 }
